@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+define( 'NONY_PORTFOLIO_VERSION', '1.2.0' );
+
 /**
  * Enqueue theme styles and scripts
  */
@@ -34,7 +36,7 @@ function nony_portfolio_enqueue_assets() {
         'nony-portfolio-style',
         get_stylesheet_uri(),
         array(),
-        wp_get_theme()->get( 'Version' )
+        NONY_PORTFOLIO_VERSION
     );
 
     // Enqueue custom JavaScript
@@ -42,7 +44,7 @@ function nony_portfolio_enqueue_assets() {
         'nony-portfolio-script',
         get_template_directory_uri() . '/assets/js/script.js',
         array(),
-        wp_get_theme()->get( 'Version' ),
+        NONY_PORTFOLIO_VERSION,
         true
     );
 }
@@ -107,9 +109,8 @@ require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 function nony_portfolio_register_required_plugins() {
     $plugins = array(
         array(
-            'name'     => 'Nony Portfolio Companion',
-            'slug'     => 'nony-portfolio-companion',
-            'source'   => get_template_directory() . '/plugins/nony-portfolio-companion.zip',
+            'name'     => 'NonyLabs Companion',
+            'slug'     => 'nonylabs-companion',
             'required' => true,
             'version'  => '1.0.0',
         ),
@@ -122,8 +123,11 @@ function nony_portfolio_register_required_plugins() {
         'has_notices'  => true,
         'dismissable'  => false,
         'dismiss_msg'  => '',
-        'is_automatic' => true,
-        'message'      => '',
+        'is_automatic' => false,
+        'message'      => sprintf(
+            __( 'This theme requires the %s plugin to unlock all features. Please install and activate it.', 'nony-portfolio' ),
+            '<strong>NonyLabs Companion</strong>'
+        ),
     );
 
     tgmpa( $plugins, $config );
@@ -338,6 +342,29 @@ function nony_portfolio_body_classes( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'nony_portfolio_body_classes' );
+
+/**
+ * Admin notice if companion plugin is not active
+ */
+function nony_portfolio_companion_notice() {
+    if ( ! is_plugin_active( 'nonylabs-companion/nonylabs-companion.php' ) ) {
+        ?>
+        <div class="notice notice-warning is-dismissible">
+            <p>
+                <strong><?php esc_html_e( 'Nony Portfolio Theme:', 'nony-portfolio' ); ?></strong>
+                <?php
+                printf(
+                    /* translators: %s: plugin installation link */
+                    __( 'This theme requires the NonyLabs Companion plugin for full functionality. %s', 'nony-portfolio' ),
+                    '<a href="' . esc_url( admin_url( 'themes.php?page=tgmpa-install-plugins' ) ) . '">' . esc_html__( 'Install it now', 'nony-portfolio' ) . '</a>'
+                );
+                ?>
+            </p>
+        </div>
+        <?php
+    }
+}
+add_action( 'admin_notices', 'nony_portfolio_companion_notice' );
 
 function nony_get_option( $key, $default = '' ) {
     return get_option( $key, $default );
