@@ -28,6 +28,7 @@ define( 'NONYLABS_COMPANION_FILE', __FILE__ );
 require_once NONYLABS_COMPANION_PATH . 'includes/class-admin.php';
 require_once NONYLABS_COMPANION_PATH . 'includes/class-shortcodes.php';
 require_once NONYLABS_COMPANION_PATH . 'includes/class-settings.php';
+require_once NONYLABS_COMPANION_PATH . 'includes/class-wizard.php';
 
 // Initialize plugin
 function nonylabs_companion_init() {
@@ -38,6 +39,7 @@ function nonylabs_companion_init() {
     NonyLabs_Companion_Admin::init();
     NonyLabs_Companion_Shortcodes::init();
     NonyLabs_Companion_Settings::init();
+    NonyLabs_Companion_Wizard::init();
 }
 add_action( 'plugins_loaded', 'nonylabs_companion_init' );
 
@@ -69,9 +71,23 @@ function nonylabs_companion_activate() {
         }
     }
     
+    set_transient( 'nonylabs_companion_activation_redirect', true, 30 );
+    
     flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'nonylabs_companion_activate' );
+
+function nonylabs_companion_activation_redirect() {
+    if ( get_transient( 'nonylabs_companion_activation_redirect' ) ) {
+        delete_transient( 'nonylabs_companion_activation_redirect' );
+        
+        if ( ! is_network_admin() && ! isset( $_GET['activate-multi'] ) ) {
+            wp_safe_redirect( admin_url( 'admin.php?page=nonylabs-wizard' ) );
+            exit;
+        }
+    }
+}
+add_action( 'admin_init', 'nonylabs_companion_activation_redirect' );
 
 // Deactivation hook
 function nonylabs_companion_deactivate() {
