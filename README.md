@@ -1,107 +1,161 @@
-=== Nony Portfolio ===
-Contributors: Nony
-Requires at least: 6.0
-Tested up to: 6.4
-Requires PHP: 7.4
-Version: 1.2.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# 🎨 Nony Portfolio
 
-== Description ==
+**A modern, glassmorphic WordPress block theme with animated blobs and particles**
 
-Nony Portfolio is a modern, glassmorphic WordPress block theme with animated blobs and particles. Perfect for developers, designers, and creatives who want to stand out with a unique portfolio website.
+*Perfect for developers, designers, and creatives who want to stand out*
 
-Features:
-* Full Site Editing (FSE) support
-* Companion plugin for advanced customization
-* Glassmorphism design with animated backgrounds
-* Responsive mobile navigation with hamburger menu
-* Custom admin panel for easy configuration
-* Profile badges management
-* Social links customization
-* Blog and page templates included
-* Custom 404 error page
-* Animated elements and smooth transitions
-* Custom context menu
-* Mouse parallax effects
+---
 
-== Installation ==
+## 📋 Theme Information
 
-1. Upload the theme folder to /wp-content/themes/
-2. Activate the theme through the 'Appearance' menu in WordPress
-3. The theme will prompt you to install the required "Nony Portfolio Companion" plugin
-4. Click "Install Required Plugins" and follow the installation wizard
-5. Once the plugin is activated, go to Portfolio > General Settings to customize your site
-6. Customize your site using the Site Editor (Appearance > Editor)
+- **Contributors:** Nony
+- **Requires at least:** WordPress 6.0
+- **Tested up to:** WordPress 6.4
+- **Requires PHP:** 7.4
+- **Version:** 1.2.0
+- **License:** GPLv2 or later
+- **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
-== Customization ==
+---
 
-This theme includes a powerful companion plugin with an admin interface:
+## ✨ Features
 
-**Portfolio Settings:**
-* General Settings - Configure navigation logo, site title, footer content
-* Profile Badges - Add/edit/remove profile badges with live preview
-* Social Links - Manage social media links with custom icons
+### 🎯 Core Features
+- **Full Site Editing (FSE)** - Complete block-based editing experience
+- **Companion Plugin** - Advanced customization capabilities
+- **Glassmorphism Design** - Modern frosted glass effects with animated backgrounds
+- **Responsive Navigation** - Beautiful hamburger menu for mobile devices
 
-**WordPress Menus:**
-* Go to Appearance > Menus to create custom navigation menus
-* Assign menus to "Primary Menu" and "Footer Menu" locations
+### 🎨 Design Elements
+- ✨ Animated blobs and particle effects
+- 🎭 Custom context menu
+- 🖱️ Mouse parallax effects
+- 🌊 Smooth transitions throughout
+- 📱 Fully responsive design
 
-**Site Editor:**
-* Colors and typography in theme.json
-* Template layouts in /templates/
-* Reusable patterns in /patterns/
-* Header and footer in /parts/
+### ⚙️ Customization Tools
+- 🎯 Custom admin panel for easy configuration
+- 🏆 Profile badges management
+- 🔗 Social links customization
+- 📄 Blog and page templates
+- 🚫 Custom 404 error page
 
-== Frequently Asked Questions ==
+---
 
-= How do I customize the navigation menu? =
+## 🎨 Customization
 
-Go to Appearance > Menus in WordPress admin, create a new menu, and assign it to the "Primary Menu" location. You can also customize the logo text in Portfolio > General Settings.
+### Portfolio Settings Panel
 
-= How do I add or edit profile badges? =
+#### 📝 General Settings
+Configure your site's foundation:
+- Navigation logo and branding
+- Site title and tagline
+- Footer content and copyright
 
-Go to Portfolio > Profile Badges in the admin dashboard. You can add, edit, or remove badges with a live preview of your changes.
+#### 🏆 Profile Badges
+Manage your achievement badges:
+- Add new badges with custom icons
+- Edit existing badges
+- Remove outdated badges
+- **Live preview** of all changes
 
-= How do I customize social links? =
+#### 🔗 Social Links
+Connect your social presence:
+- Add social media profiles
+- Custom platform support
+- Use Remix Icon classes (browse at [remixicon.com](https://remixicon.com))
 
-Go to Portfolio > Social Links to manage your social media profiles. You can add custom platforms with Remix Icon classes (find icons at remixicon.com).
+### WordPress Native Tools
 
-= The companion plugin isn't installing automatically =
+#### 🗂️ Menus
+`Appearance > Menus`
+- Create custom navigation menus
+- Assign menus to **Primary Menu** location
+- Assign menus to **Footer Menu** location
 
-Go to Appearance > Themes, then click "Install Plugins" or go to Themes > Install Plugins to manually install the Nony Portfolio Companion plugin.
+#### 🎨 Site Editor
+`Appearance > Editor`
+- Customize colors and typography via `theme.json`
+- Modify template layouts in `/templates/`
+- Create reusable patterns in `/patterns/`
+- Edit header and footer in `/parts/`
 
-== Changelog ==
+---
 
-= 1.2.0 =
-* Added companion plugin for advanced customization
-* Added custom admin panel with organized settings
-* Added profile badges management with live preview
-* Added social links customization
-* Fixed navigation menu PHP execution issues
-* Improved responsive mobile navigation
-* Added TGM Plugin Activation for automatic plugin installation
-* Updated footer with customizable content
-* Improved badge alignment and styling
+## ❓ Frequently Asked Questions
 
-= 1.1.0 =
-* Added sticky navigation header
-* Added responsive mobile menu
-* Added footer with social links
-* Improved glassmorphic styling
-* Fixed container height inconsistencies
+### How do I customize the navigation menu?
+Navigate to **Appearance > Menus** in WordPress admin, create a new menu, and assign it to the **Primary Menu** location. You can also customize the logo text in **Portfolio > General Settings**.
 
-= 1.0.0 =
-* Initial release
-* Full Site Editing support
-* Custom block patterns
-* Animated glassmorphic design
-* Blog and page templates
-* Custom 404 page
+### How do I add or edit profile badges?
+Go to **Portfolio > Profile Badges** in the admin dashboard. You can add, edit, or remove badges with a live preview of your changes.
 
-== Credits ==
+### How do I customize social links?
+Navigate to **Portfolio > Social Links** to manage your social media profiles. You can add custom platforms with Remix Icon classes (find icons at [remixicon.com](https://remixicon.com)).
 
-* Fredoka Font: https://fonts.google.com/specimen/Fredoka
-* Remix Icon: https://remixicon.com/
-* TGM Plugin Activation: http://tgmpluginactivation.com/
-* Designed and developed by Nony
+### The companion plugin isn't installing automatically
+Go to **Appearance > Themes**, then click **Install Plugins** or navigate to **Themes > Install Plugins** to manually install the Nony Portfolio Companion plugin.
+
+### Where can I get support?
+For issues, feature requests, or questions, please open an issue on the GitHub repository.
+
+---
+
+## 📦 Download & Installation
+
+> ⚠️ **Important:** Do not download the repository ZIP file directly!
+
+To ensure you get a working version of the theme, please download from the **[Releases](../../releases)** page. The release packages include all necessary compiled assets and dependencies.
+
+For detailed installation instructions, see **[INSTALLATION.md](INSTALLATION.md)**
+
+---
+
+## 📝 Changelog
+
+### Version 1.2.0
+- ✅ Added companion plugin for advanced customization
+- ✅ Added custom admin panel with organized settings
+- ✅ Added profile badges management with live preview
+- ✅ Added social links customization
+- 🐛 Fixed navigation menu PHP execution issues
+- ✨ Improved responsive mobile navigation
+- ✅ Added TGM Plugin Activation for automatic plugin installation
+- ✨ Updated footer with customizable content
+- ✨ Improved badge alignment and styling
+
+### Version 1.1.0
+- ✅ Added sticky navigation header
+- ✅ Added responsive mobile menu
+- ✅ Added footer with social links
+- ✨ Improved glassmorphic styling
+- 🐛 Fixed container height inconsistencies
+
+### Version 1.0.0
+- 🎉 Initial release
+- ✅ Full Site Editing support
+- ✅ Custom block patterns
+- ✅ Animated glassmorphic design
+- ✅ Blog and page templates
+- ✅ Custom 404 page
+
+---
+
+## 🙏 Credits
+
+- **Fredoka Font** - [Google Fonts](https://fonts.google.com/specimen/Fredoka)
+- **Remix Icon** - [remixicon.com](https://remixicon.com/)
+- **TGM Plugin Activation** - [tgmpluginactivation.com](http://tgmpluginactivation.com/)
+
+---
+
+## 👨‍💻 Author
+
+**Designed and developed by Nony**
+
+---
+
+## 📄 License
+
+This theme is licensed under the GPLv3 license.  
+See [LICENSE](http://www.gnu.org/licenses/gpl-3.0.html) for more information.
